@@ -1,43 +1,76 @@
-Pharma Sales Time Series Analysis & Forecasting
-This repository contains code for analyzing and forecasting pharmaceutical sales data using time series techniques. The code is structured as follows:
+# 💊 Pharma Sales Time Series Analysis & Forecasting
 
-Importing Libraries
-Libraries such as pandas, matplotlib, seaborn, and statsmodels are imported for data manipulation, visualization, and time series analysis.
+Welcome to the **Pharma Sales Forecasting** project — a comprehensive time series analysis pipeline built to analyze and predict pharmaceutical product sales over time. This project combines statistical modeling, data visualization, and machine learning techniques to forecast trends and support data-driven decision-making in the healthcare domain.
 
-Reading the Data
-The dataset consists of monthly sales data for pharmaceutical products collected over six years from January 2014 to October 2019.
+---
 
-Selected group of drugs (57 drugs) is classified to 8 Anatomical Therapeutic Chemical (ATC) Classification System categories:
+## 📌 Project Overview
 
-M01AB - Anti-inflammatory and antirheumatic products, non-steroids, Acetic acid derivatives and related substances
+This repository presents an end-to-end workflow for:
+- Exploring and visualizing pharmaceutical sales data
+- Preprocessing and cleaning time series data
+- Detecting and handling outliers
+- Forecasting future sales using statistical models like **ARIMA** and **SARIMAX**
 
-M01AE - Anti-inflammatory and antirheumatic products, non-steroids, Propionic acid derivatives
+---
 
-N02BA - Other analgesics and antipyretics, Salicylic acid and derivatives
+## 🗃️ Dataset Summary
 
-N02BE - Other analgesics and antipyretics, Pyrazolones and Anilides
+- **Duration**: January 2014 to October 2019  
+- **Frequency**: Monthly  
+- **Drugs Analyzed**: 57 drugs grouped into 8 categories based on the **ATC (Anatomical Therapeutic Chemical) Classification System**:
 
-N05B - Psycholeptics drugs, Anxiolytic drugs
+### 🔬 ATC Drug Categories
 
-N05C - Psycholeptics drugs, Hypnotics and sedatives drugs
+- **M01AB** – Non-steroidal Anti-inflammatory (Acetic acid derivatives)  
+- **M01AE** – Non-steroidal Anti-inflammatory (Propionic acid derivatives)  
+- **N02BA** – Analgesics & Antipyretics (Salicylic acid derivatives)  
+- **N02BE** – Analgesics & Antipyretics (Pyrazolones & Anilides)  
+- **N05B** – Psycholeptics – Anxiolytics  
+- **N05C** – Psycholeptics – Hypnotics & Sedatives  
+- **R03** – Drugs for Obstructive Airway Diseases  
+- **R06** – Systemic Antihistamines  
 
-R03 - Drugs for obstructive airway diseases
+---
 
-R06 - Antihistamines for systemic use
+## 📊 Exploratory Data Analysis (EDA)
 
-Data Exploration
-Basic exploration of the dataset is performed using statistical summaries and visualization techniques to understand the underlying patterns and distributions.
+- Performed statistical summaries and time-based visualizations  
+- Analyzed sales distribution by drug category  
+- Identified key patterns in seasonality and sales spikes
 
-Data Preprocessing
-The 'datum' column is converted to datetime format, and year and month are extracted as separate columns. Zero values in the dataset are replaced with mean values to ensure data integrity.
+---
 
-Outlier Detection
-Box plots are created to visualize the distribution of sales for each medicine, and zero values in the dataset are identified and handled appropriately.
+## 🧹 Data Preprocessing
 
-Time Series Analysis
-The time series analysis includes decomposing the data into trend, seasonality, and residual components, as well as assessing stationarity using the Augmented Dickey-Fuller (ADF) test.
+- Converted `datum` column to `datetime` format  
+- Extracted `year` and `month` as separate features  
+- Replaced zero values with mean sales per drug for data integrity  
 
-Forecasting Future Sales
-Two forecasting models, ARIMA and SARIMAX, are implemented to forecast future sales for each medicine category. The forecasted values are visualized to provide insights into future sales trends.
+---
 
-Feel free to explore the code files and Jupyter notebooks for detailed implementation and analysis steps.
+## ⚠️ Outlier Detection
+
+- Used box plots to visualize sales distributions  
+- Detected and handled zero or extreme values appropriately
+
+---
+
+## 📈 Time Series Analysis
+
+- Decomposed time series into **trend**, **seasonality**, and **residuals**  
+- Tested stationarity using the **Augmented Dickey-Fuller (ADF)** test  
+- Differenced non-stationary series for modeling
+
+---
+
+## 🔮 Forecasting
+
+- Implemented and tuned **ARIMA** and **SARIMAX** models  
+- Forecasted future sales across each drug category  
+- Visualized predicted vs actual trends to interpret model performance
+
+---
+
+## 📁 Repository Structure
+
